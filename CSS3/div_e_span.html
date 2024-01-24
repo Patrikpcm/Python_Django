@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Divs e Span</title>
+        <meta charset="utf-8">
+      
+        <style type="text/css">
+            #rodape{
+                background-color: darkred;
+            }
+
+            #assinatura{
+                color: pink;
+            }
+            
+            #topo{
+                background-color:rgb(38, 38, 56);
+            }
+            
+            #conteudo{
+                background-color: aqua;
+            }
+
+            .produto{
+                background-color: gray;
+                margin: 10px;
+            }
+            .azul{
+                background-color: blue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="topo">
+            <img src="arquivos/imagens/amazon_logo.webp" width="200" alt="10">
+            <ul>
+                <li>Home</li>
+                <li>Produtos</li>
+                <li>Contato</li>
+            </ul>
+        </div>
+
+        <div id="conteudo">
+            <div class="produto">
+                Produto 1
+            </div>
+
+            <div class="produto">
+                Produto 2
+            </div>
+
+            <div class="produto">
+                Produto 3
+            </div>
+        </div>
+
+        <!--Elementos span são do tipo inline(linha), colocando um ao lado do outro, mesmo sendo elementos separados-->
+        <span>
+            Elemento1
+        </span>    
+        <span>
+            Elemento2
+        </span>
+        <span>
+            Elemento3
+        </span>
+        <!--Divs são do tipo bloco, cada uma ocupa uma linha completa-->
+        <div>
+            Elemento1
+        </div>
+        <div>
+            Elemento2
+        </div>
+
+        <div id="rodape">
+            Todos os <span class="azul">DIREITOS</span> reservados
+        </div>
+                    
+    </body>
+
+</html>
