@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Estilo de textos</title>
+        <meta charset="utf-8">
+      
+        <style type="text/css">
+           body{
+            font-size: 30px;
+            font-family: 'Times New Roman', 
+                          Times,
+                          serif;
+           }
+            .negrito{
+                font-weight: bold; /* se usar valores posso definir o quão negrito quero*/
+            }
+
+            .italico{
+                font-style: italic;
+            }
+
+            .texto{
+                font: bold 40px "Lucida Sans Unicode";
+            }
+
+            #underline{
+                text-decoration: underline;
+            }
+            #overline{
+                text-decoration: overline;
+            }
+            #linethrough{
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <p> Texto normal</p>
+
+            <p class="negrito"> Texto negrito</p>
+
+            <p class="italico">Texto Itálico</p>
+
+            <p><span id="underline">Formatação</span> <span id="linethrough">de</span> <span id="overline">texto</span></p>
+
+            <p class="texto">Texto com todas as formatações pré definidas</p>
+
+        </div>
+    </body>
+
+</html>
