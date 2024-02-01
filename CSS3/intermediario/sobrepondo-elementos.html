@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sobrepondo elementos</title>
+        <meta charset="utf-8">
+        
+        <style>
+           .conteudo1{
+                border: 1px solid red;
+                background: orange;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                z-index: 2;/*essa propriedade define qual conteúdo aparece por primeiro na sobreposiçao*/
+                            /*definir um número. Quanto maior, mais a frente o objeto*/
+            }                
+
+           .conteudo2{
+                border: 1px solid red;
+                background: green;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 80px;
+                left: 80px;
+                z-index: 1;
+           }
+           
+            .conteudo3{
+                border: 1px solid red;
+                background: purple;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 160px;
+                left: 160px;
+                z-index: 3;
+           }
+           
+        </style>
+    </head>
+
+    <body >
+        
+        <div>
+            <div class="conteudo1">conteúdo1</div>
+            <div class="conteudo2">conteúdo2</div>
+            <div class="conteudo3">conteúdo3</div>
+        </div>
+        
+    </body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Posicionamentos (static, relative, absolute, fixed)</title>
+        <meta charset="utf-8">
+        
+        <style>
+            h1{
+                position: static;
+            }
+
+            p{
+                position: static;
+            }
+
+            body{
+                background: #007e7e;
+            }
+
+            #container{
+                background: #FFF;
+                width: 800px;
+                margin: 10px auto;
+            }
+
+            .relative{
+                border: 1px solid red;
+                position: relative;
+                /*top, right, bottom e left*/
+                top: -30px;
+                left: 80px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <div id="container">
+            <h1>Posicionamentos</h1>
+            <p>
+                P1 - Lorem Ipsum comes from sections 1.10.32 and 1.10.33 
+                of "de Finibus Bonorum et Malorum" (The Extremes of 
+                Good and Evil) by Cicero, written in 45 BC.
+            </p>
+            <p class="relative">
+                P2 - Lorem Ipsum comes from sections 1.10.32 and 1.10.33 
+                of "de Finibus Bonorum et Malorum" (The Extremes of 
+                Good and Evil) by Cicero, written in 45 BC.
+            </p>
+            <p>
+                P3 - Lorem Ipsum comes from sections 1.10.32 and 1.10.33 
+                of "de Finibus Bonorum et Malorum" (The Extremes of 
+                Good and Evil) by Cicero, written in 45 BC.
+            </p>
+        </div>
+        
+    </body>
+
+</html>
