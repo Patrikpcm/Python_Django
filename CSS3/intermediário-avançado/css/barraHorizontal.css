@@ -1,0 +1,47 @@
+/*BARRA DE NAVEGAÇÃO HORIZONTAL*/
+
+ul#barraHorizontal{
+    margin: 0;
+    padding: 0;
+    width: 720px;
+    list-style: none;
+    background: #159cb0 url(../arquivos/barraHorizontal/imagens/fundo-horizontal.png) repeat-x;
+    float: left;
+}
+
+ul#barraHorizontal>li{
+    /*Caso a imagem não carregue, ele usara uma cor de fundo*/ 
+    float: left;
+}
+
+ul#barraHorizontal>li>a{
+    display: block;
+    padding: 0 2em;
+    line-height: 2em;
+    text-decoration: none;
+    color: white;
+    background: url(../arquivos/barraHorizontal/imagens/divisor.png) repeat-y;
+}
+
+ul#barraHorizontal>li>.primeiro{
+    background: none;
+}
+
+ul#barraHorizontal>li>a:hover{
+    background: #44cade;
+    color: #085662;
+}
+
+/************************************/
+/*ul#barraAtividades{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul#barraAtividades>li{
+    padding: 10px 20px;
+    background: url(../arquivos/barraVertical/imagens/seta.png) no-repeat left center;
+}
+
+*/

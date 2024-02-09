@@ -1,0 +1,30 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul#abaNavegacao{
+    margin: 0;
+    padding: 0;
+    width: 720px;
+    list-style: none;
+    float: left;
+    display: block;
+}
+
+ul#abaNavegacao>li{
+    float: left;
+    background: url(../arquivos/navegacaoAbas/imagens/aba-direita.png) no-repeat top right;
+}
+
+ul#abaNavegacao>li>a{
+    display: block;
+    padding: 0 2em;
+    line-height: 3em;
+    text-decoration: none;
+    background: url(../arquivos/navegacaoAbas/imagens/aba-esquerda.png) no-repeat top left;
+    color: white;
+}
+
+ul#abaNavegacao>li>a:hover{
+    color: #894a1f;
+}
