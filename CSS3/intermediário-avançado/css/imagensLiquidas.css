@@ -1,0 +1,67 @@
+/***LAYOUT FIXO***/
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgb(240, 238, 238);
+}
+
+#container{
+    width: 85%;
+    background: white;
+    margin: 0 auto;
+    min-width: 700px;
+}
+
+#marca{
+    width: 100%;
+    height: 300px;
+    background: #225992 url(../arquivos/imagensLiquidas/cabecalho2.jpg) no-repeat center;
+    line-height: 300px;
+    text-align: center;
+}
+
+#conteudo{
+    border: 1px solid red;
+    width: 74%;
+    float: right;
+}
+
+#conteudo-principal{
+    border: 1px solid red;
+    width: 62%;
+    float: left;
+}
+
+#conteudo-principal>img{
+    width: 96%;
+    padding: 2%;
+}
+
+#conteudo-secundario{
+    width: 34%;
+    float: right;
+    background: #d1d1d1;
+}
+#conteudo-secundario h1,h2,h3,p{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#navegacao{
+    width: 24%;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #d1d1d1;
+}
+
+#navegacao>ul>li{
+    list-style: none;
+    text-decoration: none;
+}
+
+#rodape{
+    clear: both;
+    background: #c4c4c4;
+    padding: 5px;
+    text-align: center;
+}
