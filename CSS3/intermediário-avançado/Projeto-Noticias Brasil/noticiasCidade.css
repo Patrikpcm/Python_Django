@@ -1,0 +1,239 @@
+/*******************ESTRURA SITE************************/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #fff url(arquivos/fundo.png) repeat-x;
+}
+
+#container{
+    width: 750px;
+    margin: 0 auto;
+}
+
+#topo{
+    height: 150px;
+    background: url(arquivos/detalhe-topo.png) no-repeat right top;
+    padding-top: 25px;
+    /*border: 1px solid red;*/
+}
+
+.logo{
+    width: 152px;
+    height: 66px;
+    background: url(arquivos/logo.png);
+    text-indent: -3000px;
+}
+/****Barra de Navegação****/
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#topo>ul{
+    background: #b10333;
+    margin-top: 30px;
+    float: left;
+}
+
+#topo>ul>li{
+    float: left;
+}
+
+#topo>ul>li>a{
+    font-size: 0.9em;
+    display: block;
+    padding: 0.5em 1.5em;
+    line-height: 2.1em;
+    text-decoration: none;
+    color: white;
+    background: url(arquivos/divisor.png) no-repeat left center;
+}
+
+#topo>ul #primeiro{
+    background: none;
+}
+
+#topo>ul>li>a:hover{
+    color: #69001d;
+}
+
+body.home a#home,
+body.brasil a#brasil,
+body.internacional a#internacional,
+body.fotos a#fotos
+{
+    color: #fff;
+    background: #de003e;
+    cursor: text;
+}
+
+/****Area de conteúdo****/
+
+#conteudo{
+    background: #f5f5f5;
+    margin-top: 60px;
+}
+
+#lateral{
+    margin: 0px 0px 20px -750px;
+    width: 180px;
+    float: left;
+}
+
+#tresColunas #primario{
+    margin: 0px 0px 20px 195px;
+    width: 270px;
+    float: left;
+    
+}
+
+#duasColunas #primario{
+    margin: 0px 0px 20px 195px;
+    width: 555px;
+    float: left;
+  
+}
+
+#umaColuna #primario{
+    margin: 0px 0px 20px 0px;
+    width: 750px;
+   
+}
+
+#secundario{
+    margin: 0 0 20px 15px;
+    width: 270px;
+    float: left;
+    
+}
+
+.caixa{
+    background: #f3f3f3 url(arquivos/fundo-caixa.png);
+    margin: 10px 0px;
+    padding: 5px 0px 5px 0;
+}
+
+.caixa>h2{
+    font-size: 1em;
+    background: #294c71;
+    color: white;
+    padding: 5px;
+}
+
+.caixa-conteudo{
+    background: white;
+    padding: 5px;
+    margin: 5px;
+}
+
+/***Formatação Menus Laterais***/
+
+#lateral ul a{
+    font-size: 0.9em;
+    padding: 3px;
+    display: block;
+    line-height: 30px;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+#lateral ul a:hover{
+    background: #f9f9f9 url(arquivos/marcador.png) no-repeat left center;
+    color: #a1a1a1;
+    padding: 20px;
+}
+
+label{
+    display: block;
+    font-size: 1.0em;
+    width: 125px;
+}
+
+input{
+    font-size: 0.9em;
+    background-color: white;
+    padding: 5px;
+    width: 145px;
+}
+
+input.submit{
+    width: 80px;
+    color: white;
+    background-color: #b10333;
+    border: 2px solid #870529;
+}
+
+/***Formatação de imagem***/
+img.imagemPrincipal{
+    width: 98%;
+    border: 3px solid #dfdfdf;
+}
+
+/*formatando cabeçalhos noticias*/
+h3{
+    font-size: 0.8em;
+    text-transform: uppercase;
+    display: inline;
+    padding: 3px;
+}
+
+.destaque h3{
+    background: #b10333;
+    color: white;
+}
+
+.entrevista h3{
+    background: #de003e;
+    color: white;
+}
+
+/***Formatação da lista de notícias***/
+#lista-noticias li{
+    padding: 2px;
+    border-bottom: 1px solid #ccc;
+    height: 62px;
+}
+
+#lista-noticias li a img{
+    float: left;
+    margin: 5px;
+}
+
+#lista-noticias li a{
+    text-decoration: none;
+}
+
+#lista-noticias li a h3{
+    font-size: 0.8em;
+    padding: 0;
+    color: #3E7AB9;
+}
+
+#lista-noticias li a p{
+    font-size: 0.7em;
+}
+
+#lista-noticias li:hover{
+    background: #eee;
+    cursor: pointer;
+}
+/**RODAPE SITE**/
+
+#container-rodape{
+    background: #294c71;
+    padding: 20px;
+}
+
+#rodape{
+    width: 750px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}

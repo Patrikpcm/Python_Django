@@ -1,0 +1,16 @@
+/*********Arredondamento com IMAGENS********/
+
+.caixa h2{
+    background: #dedede url(../arquivos/ArredondamentoComImagens/topo2.png) no-repeat left top;
+    padding: 10px 20px 0 20px;
+}
+
+.caixa{
+    width: 400px;
+    background: #dedede url(../arquivos/ArredondamentoComImagens/fundo-arredondamento.png);   
+}
+
+.caixa>p{
+    padding: 0px 20px 20px 20px;
+    background: #dedede url(../arquivos/ArredondamentoComImagens/baixo2.png) no-repeat left bottom; 
+}
