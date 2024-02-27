@@ -1,0 +1,33 @@
+/*animações*/
+
+@keyframes animacao-caixa{
+    from{
+        background: red;
+        border-radius: 0px;
+        top: 0px;
+        left: 0px;
+    }
+    to{
+        background: green;
+        border-radius: 300px;
+        top: 200px;
+        left: 200px;
+    }
+}
+
+#caixa{
+    width: 300px;
+    height: 300px;
+    background: red;
+    animation-name: animacao-caixa;
+    position: relative;
+    /*Posiçao relativa é importante para a movimentação de objetos*/
+    /*
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+        Esse mesmo bloco de códio esta representado abaixo com um único comando 
+    */
+    animation: animacao-caixa 2s 3s 10000 alternate;
+}

@@ -1,0 +1,28 @@
+header{
+    border: 1px solid #CCC;
+    background: #f2f2f2;
+    padding: 10px;
+}
+
+nav{
+    border: 1px solid green;
+    background: #f2f2f2;
+    padding: 10px;
+}
+
+article{
+    background: lightsalmon;
+}
+
+section{
+    border: 1px dotted purple;
+    padding: 15px 15px;
+    margin-left: 15px;
+}
+
+aside{
+    background: lightblue;
+    position:relative;
+    top: 0px;
+    left: 800px;
+}
