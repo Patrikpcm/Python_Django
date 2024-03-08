@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+
+    <title>Bootstrap - formulários</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap533/css/bootstrap.min.css">
+
+  </head>
+
+  <body style="margin-bottom: 200px;padding: 16px;">
+
+    
+    <!-- formulários 
+        classe: form-control-<opcoes>
+        opções: sm, lg
+    -->
+    <form>
+        
+        <!-- caixas de texto -->
+        <div class="mb-3">
+            <label for="usuario">Usuário</label>
+            <input class="form-control form-control-lg" type="text" id="usuario" placeholder="Digite seu usuário">
+        </div>
+
+        <div class="mb-3">
+            <label for="email">Email</label>
+            <input class="form-control form-control-sm" type="email" id="email" placeholder="Digite seu email" disabled>
+            <small class="form-text">Email será validado</small>
+        </div>
+
+        <!-- select -->
+        <div class="mb-3">
+            <label for="estados">Estados</label>
+            <select class="form-control" id="estados">
+                <option>Acre</option>
+                <option>Alagoas</option>
+                <option>Amapá</option>
+                <option>...</option>
+            </select>
+        </div>
+
+        <!-- textarea -->
+        <div class="mb-3">
+            <label for="mensagem">Mensagem</label>
+            <textarea class="form-control" id="mensagem" rows="3"></textarea>
+        </div>
+
+        <!-- file input -->
+        <div class="input-group mb-3">
+            <label for="arquivo">Arquivo</label>
+            <input class="form-control-file" type="file" id="arquivo">
+        </div>
+
+
+        <!-- custom file input -->
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="arquivo">Selecione arquivo</label>
+            <input  type="file" class="form-control" id="arquivo">
+        </div>
+        <br><br>
+
+        <!-- range -->
+        <div class="mb-3">
+            <label id="range">Satisfação</label>
+            <input class="form-range" type="range" 
+            id="range" min="1" max="5">
+        </div>
+
+        <!-- button -->
+        <input class="btn btn-primary" type="submit" value="Salvar">
+
+    </form>
+    <br><br>
+
+    <!-- Formulário inline -->
+    <form>
+        <div class="row">
+            <input class="col form-control mr-2" type="text" placeholder="Digite seu usuário">
+            <input class="col form-control mr-2" type="password" placeholder="Digite sua senha">
+            <input class="col-2 btn btn-primary btn-sm" type="submit" value="Logar">
+        </div>
+    </form>
+    <br><br>
+
+    <!-- 
+    Validação de formulário 
+    Classes: is-valid, is-invalid, invalid-feedback, valid-feedback
+    -->
+    <form>
+        
+        <div class="mb-3">
+            <label for="email-usuario">email</label>
+            <input class="form-control is-valid" type="text" id="email-usuario" placeholder="Digite seu e-mail">
+            <div class="valid-feedback">
+                Email válido
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="senha-usuario">Senha</label>
+            <input class="form-control is-invalid" type="email" id="senha-usuario" placeholder="Digite sua senha">
+            <div class="invalid-feedback">
+                Senha inválida
+            </div>
+        </div>
+
+        <input class="btn btn-primary" type="submit" value="Logar">
+
+    </form>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="bootstrap533/js/bootstrap.min.js"></script>
+  </body>
+</html>
