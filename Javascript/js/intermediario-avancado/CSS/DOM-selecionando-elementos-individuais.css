@@ -1,0 +1,12 @@
+#destaque{
+    background-color: red;
+}
+
+li.segundo{
+    background: orange;
+}
+
+.preto-branco{
+    color: white;
+    background: black;
+}

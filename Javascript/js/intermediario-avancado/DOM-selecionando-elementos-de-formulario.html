@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM - Selecionando elementos de formulario</title>
+        <link rel="stylesheet" href="CSS/DOM-selecionando-elementos-de-formulario.css">
+    </head>
+
+    <body>
+        <form action="" name="cadastro">
+            <input type="text" name="nome" id="nome">
+            <input type="text" name="email" id="email">
+            <select name="sexo" id="sexo">
+                <option value="">-</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>      
+        </form>
+        <!--
+            Há diferença entre usar o button dentro e fora do formulário. Quando se clica em salvar(nesse caso),
+            o formulário é encaminhado para uma outra página. Como essa página não esta definida nesse exemplo
+            o que o botão faz é praticamente recarregar a página.
+            Por razões de exemplo prático, o button foi adicionado fora para podermos visualizar o efeito do código
+            js alterando o valor dos campos.
+        -->
+        <button onclick="salvar()">Salvar</button>  
+
+     
+
+        <script type="text/javascript" src="DOM-selecionando-elementos-de-formulario.js"></script>
+    </body>
+</html>
