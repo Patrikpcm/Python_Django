@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Elementos</title>
+
+    <link rel="stylesheet" type="text/css" href="css/configurando-explorando.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <h1>Manipulando elementos</h1>
+    <p> 0 - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a 
+        type specimen book.
+    </p>
+    <p> 1 - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a 
+        type specimen book.
+    </p>
+
+    <ul>
+        <li>Patrik</li>
+        <li>Luiz</li>
+        <li>Gogola</li>
+        <li>Sabrina</li>
+        <li>Santos</li>
+        <li>Nascimento</li>
+    </ul>
+
+    <div>
+        <div id="conteudo">
+            <strong>conteudo</strong>
+            <br>
+            <span> <strong>conteudo2</strong></span>
+        </div>
+    </div>
+
+    <button acao-clique >Clique</button>
+    
+    <!-- 
+        métodos:
+        .before() - insere conteúdo antes do elemento como um todo. Antes mesmo da tag html
+        .after() - insere conteúdo após o elemento. Mesmo após a tag html
+        .prepend() - insere conteúdo no elemento, dentro da mesma tag, antes do conteúdo existente.
+        .append() - insere conteúdo no elemento, dentro da mesma tag, após o conteúdo existente.
+
+    
+    -->
+    <script type="text/javascript">
+        
+        $('[acao-clique]').click(function(){
+        
+            //INSERINDO ELEMENTOS
+            $('#conteudo').before('<strong>Elemento adicionado antes da div com id #conteudo</strong>');
+            $('#conteudo').after('<strong>Elemento adicionado depois da div com id #conteudo</strong>');
+            /*
+            O exemplo abaixo realiza a mesma coisa que os acima. A diferença é que primeiro eu crio o objeto
+            para depois adiciona-lo, com insertBefore() e insertAfter(). O mesmo vale para as funções abaixo
+            utilizando prependTo() e appendTo().
+            */
+            //$('<strong>Elemento adicionado antes da div com id #conteudo</strong>').insertBefore('#conteudo');
+            //$('<strong>Elemento adicionado depois da div com id #conteudo</strong>').insertAfter('#conteudo');
+            $('#conteudo').prepend('<em>Elemento adicionado dentro da div com id #conteudo, antes do conteúdo existente!<br> </em>');
+            $('#conteudo').append('<em><br>Elemento adicionado dentro da div com id #conteudo, depois do conteúdo existente!</em>');
+            $('#conteudo').append('<br>','<em>- Adicionar </em>','<em>varios </em>','<em>itens </em>', '<em>de uma </em>', '<em>vez</em>');
+            const lista = ['<br>- Adicionar uma lista: ', 'item1 ', 'item2 ', 'item3'];
+            $('#conteudo').append(lista);
+
+            //REMOVENDO, MOVENDO E CLONANDO ELEMENTOS
+            //$('h1').remove(); //remove o elemento
+            const retorno = $('h1').detach(); //remove o elemento, mas retorna um objeto removido
+            //console.log(retorno);
+            $('div #conteudo').before(retorno);
+            let clone = $('p').clone(); //clone copia o elemento, mas não remove o original.
+            console.log(clone[0]);
+            $('div #conteudo').after(clone[1]);
+
+            //CRIANDO ELEMENTOS E ENVOLVENDO
+            //'li' - seleciono o elemento
+            //<li> - crio o elemento
+            let item = $('<li>').append('Novo item'); //criando um elemento li e adicionando a lista
+            $('ul').append(item);
+
+            $('#conteudo').wrap('<div id="novadiv">'); //Envolvendo a div conteúdo numa nova div, inclusive com id
+            //$('p').wrapAll('<div>'); //diferente do wrap, nesse exemplo, o wrapAll ira envolver todos os parágrafos em uma única div. O wrap iria envolver cada parágrafo numa div, separadamente.
+            //$('p').unwrap(); //remove o que esta envolvolvendo a tag selecionada
+            //$('p').empty(); //remove o conteúdo do elemento selecionado
+            //$('#conteudo').replaceAll('<strong>conteúdo substituído</strong>'); substitui o objeto selecionado como um todo, por um novo conteúdo
+            $('p').replaceWith(function(){  //substituindo todos os parágrafos por span sem modificar o conteúdo 
+                const texto = $(this).text();//poderia usar .html() para copiar também as propriedades
+                return $('<span>').text(texto);
+            })
+        })
+        
+    </script>
+
+</body>
+</html>

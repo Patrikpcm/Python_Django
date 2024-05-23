@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alterando Conteúdos</title>
+
+        <link rel="stylesheet" type="text/css" href="css/configurando-explorando.css">
+
+        <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+
+        <!--<script type="text/javascript" src="js/configurando-explorando.js"></script>-->
+
+    </head>
+    <body>
+        <h1>Alternado Conteúdos</h1>
+                  
+        <ul id="lista" quantidade="6">
+            <li>Patrik</li>
+            <li>Luiz</li>
+            <li>Gogola</li>
+            <li>Sabrina</li>
+            <li>Santos</li>
+            <li>Nascimento</li>
+        </ul>
+    
+        <div id="conteudo">
+            <span>conteúdo</span>
+            <br>conteúdo
+        </div>
+
+        <hr> <!--------------------------->
+        
+        <button acao-clique >Clique</button>
+        
+        <!------------scripts--------------->
+        <script type="text/javascript">
+        
+            $('[acao-clique]').click(function(){
+                //OBTER E ALTERAR CONTEÚDOS
+                const res = $('#conteudo').html(); //pega todas as informações, inclusive marcações html
+                console.log(res);
+                const res2 = $('#conteudo').text(); //pega somente o texto
+                console.log(res2);
+
+                //ADICIONANDO CONTEÚDO(substitui o existente)
+                //$('#conteudo').html('<span>conteúdo html adicionado</span><br>'); //adiciona o texto e interpreta as tags como html
+                $('#conteudo').text('<span>conteúdo text adicionado</span>'); //interpreta as tags como texto
+
+                //ALTERANDO ul > li 
+                //$('ul').html('<li>Alterado</li>'); //substitui toda a lista por 1 membro nomeado "Alterado"
+                //$('ul li').html('<li>Alterado</li>'); //renomeia toda a lista com "Alterado"
+                //$('ul li').text('Alterado'); //renomeia toda a lista com "Alterado"
+
+                //ALTERANDO ITENS USANDO FUNÇÃO ANÔNIMA
+                $('ul li').html(function(){
+                    let item = $(this).text(); //this referência o objeto, nesse caso, cada membro da lista
+                    return (`<strong>${item}</strong>`); //deixando todos os itens em negrito
+                });
+
+                //SELECIONANDO E ALTERANDO ATRIBUTOS
+                console.log($('ul').attr('quantidade')); //selecionando
+                $('ul').attr('quantidade', '20'); //modificando um atributo
+                console.log($('ul').attr('quantidade')); //selecionando
+                $('ul').attr('tempo', '200'); //adicionando um atributo
+                console.log($('ul').attr('tempo')); //selecionando
+                $('ul').removeAttr('tempo'); //removendo um atributo
+
+                //MODIFICANDO PROPRIEDADES CSS
+                let propriedade = $('ul li').css('color'); //selecionando propriedade
+                console.log(propriedade); //imprimindo propriedade(nesse caso, RGB)
+                propriedade = $('ul li').css('background-color'); //selecionando propriedade
+                console.log(propriedade); //imprimindo propriedade(nesse caso, RGB)
+                //$('ul li').css('color', 'green'); //modificando uma propriedade
+                
+                $('ul li').css({//modificando um conjunto de propriedades simultâneamente
+                    'background-color':'cyan',
+                    'color':'purple',
+                    'font-size':'10px'
+                })
+
+            });
+        </script>
+    </body>
+</html>

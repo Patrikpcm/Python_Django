@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos com jQuery - Introdução</title>
+
+    <link rel="stylesheet" type="text/css" href="css/configurando-explorando.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <h1>Eventos em jQuery - Introdução</h1>
+    <h2>exemplo: adicionando / removendo</h2>
+    <p> 0 - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a 
+        type specimen book.
+    </p>
+    <p> 1 - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a 
+        type specimen book.
+    </p>
+
+     <div>
+        <div id="conteudo">
+            <strong>conteudo</strong>
+            <br>
+            <span><strong>conteudo2</strong></span>
+        </div>
+    </div>
+
+    <button acao-clique >Clique</button>
+    <button acao-clique2 >Clique2</button>
+    
+    <!-- 
+        Eventos:
+        - Interface:    focus, blur, change
+        - Teclado:      input, keydown, keyup, keypress
+        - Mouse:        click, dbclick, mouseup, mousedown, mouseover, mousemove, mouseout, hover
+        - Formulário:   submit, select, change
+        - Documento:    ready, load, unload
+        - Navegador:    error, resize, scroll
+    -->
+    <script type="text/javascript">
+
+        function removeBorda(){
+            $('h1').removeClass('borda');
+        };
+
+        function addBorda(){
+            $('h1').addClass('borda');
+        };
+
+        //acessando os métodos diretamente 
+        /*
+        $('h1').click(function(){ //clique add classe borda
+            $('h1').addClass('borda');
+        });
+
+        $('h1').dblclick(function(){ //double click remove classe borda
+            $('h1').removeClass('borda');
+        });
+        */
+        
+        //forma recomendada de acessar, utilizando método on que recebe 2 parametros,
+        //o método e o callback. Pode ser utilizada das seguintes maneiras:
+        $('h1').on('click', function(){
+            $('h1').addClass('borda');
+        })
+        //ou passando função
+        $('h1').on('dblclick', removeBorda);
+        //posso ainda utilizar um método que desabilitada todos os eventos associados
+        //Ele executa uma vez, e depois desabilita o evento. Clique no botão para visualizar
+        function desligar(){
+            $('h2').toggle();
+            //evento.off()
+            //ou posso fazer diretamente com off, sem variável
+            //$('[acao-clique]').off('click', desligar); //remover evento de click
+            //$('[acao-clique]').off(); //remover todos os eventos
+        }
+        //const evento = $('[acao-clique]').on('click', desligar);
+        $('[acao-clique]').on('mouseout click', desligar); //posso associar mais de um evento para a mesma ação
+
+        //** Propriedades do evento. Podem ser analisadas
+        function executar(e){
+            //console.log(e.type)
+            //console.log(e.target)
+            console.log(e.clientY, e.clientX, e.pageY, e.pageX) //pageX/Y é o tamanho total da pagina. 
+                                            //clientX/Y é a área visível da página.
+        }
+        $('[acao-clique2]').on('click', executar);
+
+    </script>
+
+</body>
+</html>

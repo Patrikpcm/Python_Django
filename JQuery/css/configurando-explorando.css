@@ -1,0 +1,13 @@
+
+.destaque{
+    background-color: red;
+}
+
+ul li{
+    background-color: gray;
+    color: blue;
+}
+
+.borda{
+    border: 1px solid red;
+}

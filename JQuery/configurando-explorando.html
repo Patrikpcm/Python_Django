@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1 - Configurando e Explorando o JQuery</title>
+
+    <link rel="stylesheet" type="text/css" href="css/configurando-explorando.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="js/configurando-explorando.js"></script>
+
+</head>
+<body>
+    
+    <h1>Configurando e Explorando o JQuery na Prática</h1>
+    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a 
+        type specimen book.
+    </p>
+    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a 
+        type specimen book.
+    </p>
+
+    <ul>
+        <li>Patrik</li>
+        <li>Luiz</li>
+        <li>Gogola</li>
+    </ul>
+
+    <div id="conteudo">
+
+    </div>
+
+    <button acao-clique >Clique</button>
+    
+    <script type="text/javascript">
+        let variavel = $('p');
+        variavel.hide(5000); //esconde os parágrafos em 5seg
+
+       // $('ul').hide(1000); //selecionando a ul diretamente e escondendo-a
+
+        //let itens  = $('ul').text(); //transformando os itens em texto
+        //$('#conteudo').text(itens); //mostrando os itens dentro de conteúdo
+
+        $('p').addClass('destaque'); //adicionando a classe destaque aos parágrafos
+
+        $('[acao-clique]').click(function() {
+            //$('ul').addClass('destaque');
+            $('#conteudo').text($('ul').text());
+            $('p').toggle();
+        })
+
+        
+    </script>
+
+</body>
+</html>

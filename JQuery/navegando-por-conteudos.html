@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navegando por conteúdos</title>
+
+        <link rel="stylesheet" type="text/css" href="css/configurando-explorando.css">
+
+        <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+
+        <!--<script type="text/javascript" src="js/configurando-explorando.js"></script>-->
+
+    </head>
+    <body>
+        <h1>Navegando por conteúdos</h1>
+        <h3>navegando por conteúdos</h3>
+        <h3><strong>conteúdo h3</strong></h3>
+        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            
+        </p>
+        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+
+        </p>
+    
+        <ul>
+            <li>Patrik</li>
+            <li>Luiz</li>
+            <li>Gogola</li>
+            <li style="display: none;">Sabrina</li>
+            <li>Santos</li>
+            <li>Nascimento</li>
+        </ul>
+    
+        <div id="conteudo">
+            <span>conteúdo</span>
+            <br>
+            conteudo
+            <strong>conteudo2</strong>
+        </div>
+
+            
+        <button acao-clique >Clique</button>
+        
+        <script type="text/javascript">
+            $('[acao-clique]').click(function(){
+                //$('span').parent().addClass('borda'); //selecionando o pai de span, que no caso é a div
+                //$('span').parents().addClass('borda'); //selecionando todos os parentes de span
+                
+                //$('li:first').addClass('borda');//selecionando o primeiro elemento da lista
+                //$('li:first').next().next().addClass('borda');//selecionando o próximo do próximo elemento da lista
+                //$('li:last').prev().addClass('borda'); //selecionando o elemento anterior
+                //existem várias outras funções de navegação, olhar documentação.
+                $('body').find('strong').addClass('borda'); //função find vai localizar dentro de body todo mundo que possui a tag strong e add a classe.
+            
+                let elementoDom = document.getElementById('conteudo');
+                //elementoDom.addClass('borda'); 
+                /*
+                A chamada anteriro apresenta erro, pois esses elementos, como o addClass(), só estão disponíveis para elementos jQuery.
+                O Objeto DOM obtido através de HTML é um objeto diferente de um objeto jQuery.
+                */
+                //Para utilizar um elemento DOM, eu preciso converter ele para jQuery da seguinte forma:
+                $(elementoDom).addClass('borda'); //agora sim o elemento DOM esta envolvido(convertido) para um objeto jQuery
+                
+                //o mesmo exemplo serve para a função Each() que retorna um elemento do tipo DOM, portanto o exemplo anterior deve ser aplicado
+                $('li').each(function(i, elemento){
+                    //elemento.addClass('borda'); //dessa forma, dará erro, pois o elemento retornado é do tipo DOM
+                    $(elemento).addClass('borda');
+                })
+            });
+        </script>
+    </body>
+</html>

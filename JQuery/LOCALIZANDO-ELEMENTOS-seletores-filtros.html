@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Localizando Elementos - Seletores e Filtros</title>
+
+        <link rel="stylesheet" type="text/css" href="css/configurando-explorando.css">
+
+        <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+
+        <!--<script type="text/javascript" src="js/configurando-explorando.js"></script>-->
+
+    </head>
+    <body>
+        <h1>Selecionando Elementos</h1>
+        <h3>Seletores e Filtros</h3>
+        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            
+        </p>
+        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+
+        </p>
+    
+        <ul>
+            <li>Patrik</li>
+            <li>Luiz</li>
+            <li>Gogola</li>
+            <li style="display: none;">Sabrina</li>
+            <li>Santos</li>
+            <li>Nascimento</li>
+        </ul>
+    
+        <div id="conteudo">
+            conteudo
+        </div>
+
+        <hr> <!--___________________-->
+
+        <h1>Formulário</h1>
+        <form id="cadastro">
+            <input type="text" placeholder="Nome">
+            <input type="password" placeholder="Senha">
+            <hr>
+            <input type="radio">
+            <input type="checkbox">
+            <hr>
+            <input type="submit" value="Salvar">
+        </form>
+        
+        <button acao-clique >Clique</button>
+        
+        <script type="text/javascript">
+            const obj = jQuery('ul li'); //selecionando elementos e armazenando objeto
+            const obj2 = $('h1'); //tem o mesmo efeito de chamar a função jQuery
+            console.log(obj);
+            console.log(obj2);
+
+            $('[acao-clique]').click(function(){
+                $('#conteudo').toggleClass('destaque');
+
+                /*ENCADEAMENTO*/
+                $('h1') //selecionei h1;  
+                    .css('color','white') //acessei os elementos css e modifiquei texto para branco;
+                    .addClass('destaque') //adicionei classe destaque;
+                    .slideToggle(); //adicionei um toggle
+                
+                /*SELETORES EXCLUSIVOS DO jQuery*/
+                //$('ul li:first').addClass('destaque'); //acessando somente o primeiro elemento da lista
+                //$('ul li:last').addClass('destaque'); //acessando o último elemento
+                //$('ul li:eq(1)').addClass('destaque'); //acessando elemento específico
+                //$('ul li:odd').addClass('destaque'); //alternando elementos impares
+                //$('ul li:even').addClass('destaque'); //alternando elementos pares
+                //$('ul li:hidden').show(); //selecionando e mostrando os elementos que estão escondidos
+                //$('ul li:contains("Gogola")').addClass('destaque'); //selecionando apenas o elemento que contém o texto
+
+                /*FILTROS DE FORMULÁRIOS*/
+                //$('form :input').hide(); //escondendo todos os elementos do tipo input
+                $('form :password').toggle(); //selecionando elementos com tipos específicos
+                //$('form :text').toggle(); //selecionando elementos com tipos específicos
+                //$('form :radio').toggle(); //selecionando elementos com tipos específicos
+                //$('form :checkbox').toggle(); //selecionando elementos com tipos específicos
+            });
+            
+            //Com jQuery posso utilizar seletores CSS como visto nas aulas de CSS
+
+           
+        </script>
+    </body>
+</html>

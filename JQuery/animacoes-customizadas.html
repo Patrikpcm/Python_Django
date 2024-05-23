@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações Customizadas</title>
+
+    <link rel="stylesheet" type="text/css" href="css/animacoes.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <button acao-esquerda>Ação Esquerda</button>
+    <button acao-direita>Ação Direita</button>
+
+    <div id="conteudo" >Animações Customizadas</div>
+
+    <script>
+        /*
+        function callback(){
+            console.log('Terminou animação');
+        }
+
+        $(function(){
+            $('#conteudo').on('click', function(){
+                $('#conteudo').animate(
+                    //{width: 100},
+                    //{width: '100%'},
+                    //{left: 50},
+                    {   bottom:20, 
+                        right: 20, 
+                        padding: '+=50', //incrementando o padding que já existe
+                        opacity: 0.3,
+                        
+                    }, 1000, callback()
+                );
+            })
+        });
+        */
+        $(function(){//lembrando que essa chamada é igual a ready
+            $('[acao-esquerda]').on('click', function(){
+                $('#conteudo').animate(
+                    {
+                        left: '-=20px',
+                    }
+                )
+            });
+
+            $('[acao-direita]').on('click', function(){
+                $('#conteudo').animate({
+                    left: '+=20px',
+                });
+            });
+
+            document.onkeydown = function(e){
+                switch (e.key){
+                    case 'ArrowUp':
+                        $('#conteudo').animate({
+                            top: '-=20px',
+                        }, 100);
+                        break;
+                    case 'ArrowDown':
+                        $('#conteudo').animate({
+                            top: '+=20px',
+                        }, 100);
+                        break;
+                    case 'ArrowLeft':
+                        $('#conteudo').animate({
+                            left: '-=20px',
+                        }, 100);
+                        break;
+                    case 'ArrowRight':
+                        $('#conteudo').animate({
+                            left: '+=20px',
+                        }, 100);
+                        break;
+                }
+            };
+
+        });
+    </script>
+</body>
+</html>

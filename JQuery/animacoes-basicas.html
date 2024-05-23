@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações Básicas</title>
+
+    <link rel="stylesheet" type="text/css" href="css/animacoes.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Animações Básicas</h1>
+    <p>Parágrafo 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut nulla ut enim pulvinar viverra. Nulla facilisi. Donec lacinia erat ultricies suscipit suscipit. Aenean accumsan aliquet tempor. Morbi eu felis nec eros placerat euismod.</p>
+    <img id="animacao" src="imagens/celular.png" height="200px" alt="">
+    <button acao-clique>clique</button>
+
+    <script>
+        $(function(){
+            $('[acao-clique]').on('click', function(){
+                let duracao = 1000;
+               // $('#animacao').hide(duracao, function(){console.log("Animação terminou!")}); //esconde o item e realiza um callback no log (callback é opcional)
+                //$('#animacao').hide(duracao, function(){$('#animacao').show(duracao)}); //esconde o item com uma duracao x e depois realiza um callback de mostrar novamente com show
+                //$('#animacao').addClass('esconder'); $('#animacao').fadeIn(duracao + 1000);//mostra o item escondido
+                //$('#animacao').fadeOut(duracao); //esconde o item
+                //$('#animacao').fadeTo(duracao, 0.5); //torna o item opaco. Vai de 0 a 1
+                //$('#animacao').fadeToggle(duracao); //animacao semelhante ao toggle convencional, entretanto possuí animação
+                //$('#animacao').slideUp(duracao, function(){$('#animacao').slideDown(duracao)}); //esconde o item com um deslizamento superior-lateral e mostra novamente com slideDown()
+                $('#animacao').slideToggle(duracao);
+            })
+        });
+
+    </script>
+</body>
+</html>
