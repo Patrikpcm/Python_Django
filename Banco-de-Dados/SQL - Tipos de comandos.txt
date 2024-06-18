@@ -1,0 +1,5 @@
+DDL(Data Definition Language): create, alter, drop - Comandos que criam, alteram e excluem tabelas.
+DML(Data Manipulation Language): insert, update, dele - Comandos para manipulação dos dados nas tabelas.
+DQL(Data Query Language): select - Comando que seleciona os dados, faz pesquisa no banco.
+DCL(Data Control Language): grant, deny, revoke - Comandos que controlam o nível/tipo de acesso dos usuários do banco, dizendo quem pode inserir, excluir, modificar, etc.
+DTL(Data Transaction Language): begin, commit, rollback - Comando de controle das tabelas, garantem a integridade do banco e das ações executadas.
