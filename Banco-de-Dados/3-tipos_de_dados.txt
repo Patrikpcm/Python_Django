@@ -1,0 +1,45 @@
+
+TIPOS DE DADOS
+
+Numérico:   -Inteiro(TinyInt, SmallInt, Int, MediumInt, BigInt)
+            -Real(Decimal, Float, Double, Real)
+            -Lógico(Bit, Boolean)
+
+Data/Tempo: -Date, DateTime, Timestamp, Time, Year
+
+Textos:     -Caractere(Char, Varchar)
+            -Texto(TinyText, Text, MediumText,LongText)
+            -Binário(TinyBlob, Blob, MediumBlob, LongBlob)
+            -Coleção(Enum, Set) --Enum pode ser usado para selecionar masculino/feminino, por exemplo.
+
+Espacial:   -Geometry, Point, Polygon, MultiPolygon
+
+
+PRINCIPAIS TIPOS DE DADOS
+
+TinyInt     ->  -128 até 127
+SmallInt    ->  -32.768 até 32.767
+MediumInt   ->  -2.147.483.648 até 2.147.483.647
+BigInt      ->  -2^63 até 2^63 (-9 quintilhão até 9 quintilhão)
+
+Float(M,D)      ->  8 cadas decimais    -- não versões mais novas não preciso definir m,d
+Double(M,D)     ->  16 casas decimais   -- não versões mais novas não preciso definir m,d
+Decimal(M,D)    ->  M até 65 / D até 30 (não maior que M)
+                    ex: decimal(8,2) = 12345678.78
+
+TinyText    ->  255 caracteres
+Text        ->  65.535
+MediumText  ->  16.777.215
+LongText    ->  4.294.967.295
+
+char        ->  255 Tamanho Fixo    ex: se definir char(2) para selecionar estados SP, PR, MG etc.
+                                        Entretanto se só adicionar um caractere ele ainda permanece
+                                        com os 2 espaços, sendo 1 fixado como vazio.
+varchar     ->  65.535 Tamanho variavel  ex: varchar(2), adiciono apenas 1 caractere, o segundo espaço não
+                                            é reservado.
+
+Date        ->  AAAA-MM-DD (2024-01-01)
+Datetime    ->  AAAA-MM-DD HH:MM:SS
+Year        ->  AAAA
+Time        ->  HH:MM:SS
+
