@@ -12,16 +12,16 @@ composição de 2 colunas não pode se repetir. Porém é raro de se usar.
 
 /*Criando uma tabela com chave primária*/
 CREATE TABLE produtos(
-    id INT UNSIGNED NOT NULL AUTO_INCREMENT, -- INT sem sinal e a AUTO_INCREMENT incrementa os valores automáticamente
+    pruduto_id INT UNSIGNED NOT NULL AUTO_INCREMENT, -- INT sem sinal e a AUTO_INCREMENT incrementa os valores automáticamente
     titulo VARCHAR(100),
     descricao TEXT,
     preco DECIMAL(15,2),
     categoria VARCHAR(70),
     marca VARCHAR(70),
     foto VARCHAR(70),
-    PRIMARY KEY(id),
+    PRIMARY KEY(produto_id),
     UNIQUE KEY (titulo) -- uma informação que não se repete ex: email, cpf, telefone, etc...
-    -- normalmente não é gerada de forma automática
+                        -- normalmente não é gerada de forma automática
 );
 
 INSERT INTO produtos VALUES (
