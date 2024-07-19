@@ -1,0 +1,29 @@
+
+Ao utilizar Chaves Estrangeiras para criar relacionamentos entre tabelas,
+nós acabamos tendo diferentes tipos de relacionamentos.
+
+- Um para um:           Um registro na tabela 1 deve ter somente 1 registro compatível na tabela 2.
+                        Ex: Tabelas funcionários e salários. Um funcionário só tem um salário. 
+
+- Um para muitos:       Um reigstro na tabela 1 pode ter vários registros compatíveis na tabela 2,
+                        mas os registros da tabela 2 devem ter apenas um registro na tabela 1.
+                        Ex: Tabelas clientes e compras. Um cliente pode ter várias compras diferentes.
+
+- Muitos para muitos:   Um registro na tabela 1 pode ter vários registros compatíveis na tabela 2 e 
+                        vice-versa. Normalmente, numa relação muitos para muitos é criada uma terceira
+                        tabela (tabela 3) que contém as correlações. Logo, tabela 1 tem uma relação de
+                        muitos para muitos com tabela 2, porém ambas tem relação de 1 para muitos 
+                        com a tabela 3.
+                        Ex: Tabelas funcionários e computadores. A empresa tem várias filiais e os
+                        funcionários viajam de uma filial para outra, logo, eles têm vários computadores
+                        bem como os computadores têm vários funcionários que os utilizam.
+
+- Autorreferência/auto-relacionamento:  É utilizado quando a tabela precisa ter um relacionamento com ela
+                                        mesma, onde um registro está associado a um ou mais registros.
+                                        Ex: tabela de clientes, essa tabela pertence a uma empresa a qual
+                                        se pode começar a utilizar o serviço por conta própria ou através
+                                        de uma indicação. A tabela seria composta por:
+
+                                        id  |   Nome    |   Indicação   |    ...   |
+                                        01  |   Maria   |     ----      |    ...   |   
+                                        02  |   Pedro   |   Maria(01)   |    ...   |
