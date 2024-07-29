@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>{% block titulo %}{% endblock %}</title>
+
+    <style>
+        .conteudo{
+            background-color: #f2f2f2;
+            padding: 5px;
+            float: right;
+            width: 75%;
+        }
+        .lateral{
+            background-color: #f2f2f2;
+            padding: 5px;
+            float: left;
+            width: 20%;
+        }
+        .menu{
+            background-color: orange;
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu"> <!--Esse menu apresentará erro navegando a partir de outros menus-->
+        <a href=""> Home | </a>
+        <a href="celulares"> Celulares | </a>
+        <a href="moveis"> Móveis | </a>
+        <a href="notebooks"> Notebooks  </a>
+    </div>
+    <div class="lateral">
+        <h2>Categorias</h2>
+        <ul>
+            <li>Ofertas do dia</li>
+            <li>Celulares</li>
+            <li>Móveis</li>
+            <li>Eletrodomésticos</li>
+            <li>Tv e Vídeo</li>
+        </ul>
+    </div>
+    <div class="conteudo">
+        {% block conteudo %}{% endblock %}
+    </div>
+   
+</body>
+</html>

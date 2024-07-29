@@ -1,0 +1,1 @@
+Esse projeto exemplifica o uso de Arquivos Estáticos.

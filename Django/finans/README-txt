@@ -1,0 +1,4 @@
+Esse exemplo mostra como criar arquivos estaticos {& load static &} e como configurar isso na
+estrutura de arquivos criada pelo Django.
+Também mostra o uso de arquivos partial, ou parciais. (quebrar pedaços do código html em outros
+arquivos e utiliza-los quantas vezes for necessário.)
